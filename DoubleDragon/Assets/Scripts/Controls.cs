@@ -3,8 +3,9 @@ using System.Collections;
 
 public class Controls : MonoBehaviour {
 
-	public Rigidbody2D rb;
+	private Rigidbody2D rb;
 	public float movespeed;
+	public float jumpspeed;
 
 	// Use this for initialization
 	void Start () {
@@ -21,6 +22,10 @@ public class Controls : MonoBehaviour {
 	if (Input.GetKey (KeyCode.RightArrow))
 		{
 			rb.velocity = new Vector2(movespeed, rb.velocity.y);
+		}
+		if (Input.GetMouseButtonDown (0))
+		{
+			rb.AddForce(new Vector2(0, jumpspeed),ForceMode2D.Impulse);
 		}
 	}
 }
