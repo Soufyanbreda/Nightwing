@@ -4,8 +4,11 @@ using System.Collections;
 public class Controls : MonoBehaviour {
 
 	private Rigidbody2D rb;
-	public float movespeed;
-	public float jumpspeed;
+	public float movespeed = 3;
+	public float jumpspeed = 5;
+	public float increase;
+	public float maxIncrease = 100;
+	public Transform renderer;
 
 	// Use this for initialization
 	void Start () {
@@ -14,18 +17,29 @@ public class Controls : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		rb.velocity = new Vector2(movespeed, rb.velocity.y);
 	
-	if (Input.GetKey (KeyCode.LeftArrow)) 
+		if (++increase == maxIncrease) 
 		{
-			rb.velocity = new Vector2(-movespeed, rb.velocity.y);
+			movespeed++;
+			increase = 0;
 		}
-	if (Input.GetKey (KeyCode.RightArrow))
-		{
-			rb.velocity = new Vector2(movespeed, rb.velocity.y);
-		}
+
 		if (Input.GetMouseButtonDown (0))
 		{
-			rb.AddForce(new Vector2(0, jumpspeed),ForceMode2D.Impulse);
+			rb.AddForce(new Vector2(0, 5),ForceMode2D.Impulse);
 		}
+
 	}
+
+	private void LookDirection(int direction)
+	{
+		renderer.localScale = new Vector3 (Mathf.Abs (renderer.localScale.x) * direction,
+		                        renderer.localScale.y,
+		                        renderer.localScale.z);
+		}
+
+
+
 }
