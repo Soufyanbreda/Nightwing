@@ -243,6 +243,7 @@ GameObject:
   - 61: {fileID: 1868514068}
   - 50: {fileID: 1868514067}
   - 114: {fileID: 1868514066}
+  - 114: {fileID: 1868514069}
   m_Layer: 0
   m_Name: Nero
   m_TagString: Untagged
@@ -263,6 +264,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movespeed: 6
   jumpspeed: 9
+  increase: 0
+  maxIncrease: 100
   renderer: {fileID: 2114849787}
 --- !u!50 &1868514067
 Rigidbody2D:
@@ -290,6 +293,22 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
+--- !u!114 &1868514069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1868514065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb188eaa3ae5c49cbad7b3e61adb2ae7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 0}
+  velocity: {x: 0, y: 0}
+  canShoot: 1
+  offset: {x: 0, y: 0}
+  cooldown: 1
 --- !u!4 &1868514070
 Transform:
   m_ObjectHideFlags: 0
