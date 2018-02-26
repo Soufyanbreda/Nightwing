@@ -23,6 +23,7 @@ public class Controls : MonoBehaviour {
 		if (++increase == maxIncrease) 
 		{
 			movespeed++;
+			ScoreScript.scoreValue++;
 			increase = 0;
 		}
 

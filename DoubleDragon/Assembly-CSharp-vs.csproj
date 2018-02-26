@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Controls.cs" />
      <Compile Include="Assets\Scripts\Destroy.cs" />
+     <Compile Include="Assets\Scripts\ScoreScript.cs" />
      <Compile Include="Assets\Scripts\Shootsomething.cs" />
      <Compile Include="Assets\Scripts\TouchContols.cs" />
   </ItemGroup>
