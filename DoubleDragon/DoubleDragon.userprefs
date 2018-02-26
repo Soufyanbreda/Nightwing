@@ -6,7 +6,7 @@
       <File FileName="Assets/Scripts/Controls.cs" Line="25" Column="16" />
       <File FileName="Assets/Scripts/TouchContols.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Destroy.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ScoreScript.cs" Line="24" Column="1" />
+      <File FileName="Assets/Scripts/ScoreScript.cs" Line="16" Column="3" />
       <File FileName="Assets/Scripts/ScoreManager.cs" Line="26" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>

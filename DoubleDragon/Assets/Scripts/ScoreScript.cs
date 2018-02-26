@@ -1,11 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class ScoreScript : MonoBehaviour {
 
-	public GUIText scoreText;
+	public Text scoreText;
+
+	public Text hiscoreText;
 
 	public float scoreValue;
+
+	public float hiscoreValue;
 
 	public float pointsPerSecond;
 
@@ -20,6 +25,13 @@ public class ScoreScript : MonoBehaviour {
 	void Update () {
 		scoreValue += pointsPerSecond * Time.deltaTime;
 
+		if (scoreValue > hiscoreValue)
+		{
+		  hiscoreValue = scoreValue;
+		}
+
 		scoreText.text = "Score: " + Mathf.Round(scoreValue);
+		
+		hiscoreText.text = "High Score: " + Mathf.Round(hiscoreValue);
 	}
 }
