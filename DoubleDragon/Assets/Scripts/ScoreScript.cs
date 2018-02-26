@@ -3,17 +3,23 @@ using System.Collections;
 
 public class ScoreScript : MonoBehaviour {
 
-	public static int scoreValue = 0;
+	public GUIText scoreText;
 
-	GUIText score;
+	public float scoreValue;
+
+	public float pointsPerSecond;
+
+
 	// Use this for initialization
 	void Start () {
 	
-		score = GetComponent<GUIText> ();
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		score.text = "Score: " + scoreValue;
+		scoreValue += pointsPerSecond * Time.deltaTime;
+
+		scoreText.text = "Score: " + Mathf.Round(scoreValue);
 	}
 }
