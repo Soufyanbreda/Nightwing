@@ -29,7 +29,7 @@ public class ScoreScript : MonoBehaviour {
 		{
 		  hiscoreValue = scoreValue;
 		}
-
+	
 		scoreText.text = "Score: " + Mathf.Round(scoreValue);
 		
 		hiscoreText.text = "High Score: " + Mathf.Round(hiscoreValue);
