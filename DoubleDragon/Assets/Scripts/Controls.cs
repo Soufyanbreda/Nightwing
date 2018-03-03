@@ -10,13 +10,22 @@ public class Controls : MonoBehaviour {
 	public float maxIncrease = 100;
 	public Transform renderer;
 
+	public bool grounded;
+	
+	public LayerMask whatIsGround;
+
+	private Collider2D myCollider;
+
 	// Use this for initialization
 	void Start () {
 	rb = GetComponent<Rigidbody2D>();
+	myCollider = GetComponent<Collider2D> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+		grounded = Physics2D.IsTouchingLayers (myCollider, whatIsGround);
 
 		rb.velocity = new Vector2(movespeed, rb.velocity.y);
 	
@@ -28,7 +37,11 @@ public class Controls : MonoBehaviour {
 
 		if (Input.GetMouseButtonDown (0))
 		{
-			rb.AddForce(new Vector2(0, 5),ForceMode2D.Impulse);
+			if(grounded)
+			{
+				rb.AddForce(new Vector2(0, 5),ForceMode2D.Impulse);
+			}			
+			
 		}
 
 	}

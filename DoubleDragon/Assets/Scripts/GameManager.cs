@@ -30,10 +30,8 @@ public class GameManager : MonoBehaviour {
 
 	public IEnumerator Restartgame()
 		{
-			
 				yield return new WaitForSeconds (0.5f);
 				player.transform.position = playerStartpoint;
 				platformGenerator.position = platformStartpoint;
-
 		}
 }
