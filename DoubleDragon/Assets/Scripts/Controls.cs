@@ -15,11 +15,14 @@ public class Controls : MonoBehaviour {
 	public LayerMask whatIsGround;
 
 	private Collider2D myCollider;
+	
+	private Animator myAnimator; 
 
 	// Use this for initialization
 	void Start () {
 	rb = GetComponent<Rigidbody2D>();
 	myCollider = GetComponent<Collider2D> ();
+	myAnimator = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -43,6 +46,8 @@ public class Controls : MonoBehaviour {
 			}			
 			
 		}
+				myAnimator.SetFloat ("Speed", rb.velocity.x);
+				myAnimator.SetBool ("Grounded", grounded);
 
 	}
 
