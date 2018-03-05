@@ -18,6 +18,8 @@ public class Controls : MonoBehaviour {
 	
 	private Animator myAnimator; 
 
+	public GameManager thegameManager;
+
 	// Use this for initialization
 	void Start () {
 	rb = GetComponent<Rigidbody2D>();
@@ -58,6 +60,12 @@ public class Controls : MonoBehaviour {
 		                        renderer.localScale.z);
 		}
 
-
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		if (other.gameObject.tag == "killbox")
+			{
+				Application.LoadLevel(Application.loadedLevel);	
+			}		
+	}
 
 }

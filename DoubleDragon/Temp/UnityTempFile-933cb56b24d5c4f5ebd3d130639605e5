@@ -177,6 +177,7 @@
 -define:UNITY_EDITOR_OSX
 -define:ENABLE_NATIVE_ARRAY_CHECKS
 -define:UNITY_TEAM_LICENSE
+'Assets/PlayrFollower.cs'
 'Assets/Scripts/Controls.cs'
 'Assets/Scripts/Destroy.cs'
 'Assets/Scripts/GameManager.cs'
