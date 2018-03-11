@@ -28,10 +28,14 @@ public class ScoreScript : MonoBehaviour {
 		if (scoreValue > hiscoreValue)
 		{
 		  hiscoreValue = scoreValue;
+		
 		}
 	
 		scoreText.text = "Score: " + Mathf.Round(scoreValue);
 		
 		hiscoreText.text = "High Score: " + Mathf.Round(hiscoreValue);
+				PlayerPrefs.SetInt("highscore", (int)hiscoreValue);
+
 	}
+
 }
