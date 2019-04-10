@@ -1,6 +1,6 @@
-# DoubleDragon
-DoubleDragon Darkness and Light 
+# Nightwing
+Mobile game made with unity C#
 
-Double Dragon is the story of Nero the evil one and Moro the clumsy one,
-Two brothers seperated by birth follow two different lifepaths,
-but are destined to meet each other again.
+## Play it now
+
+available on the google play store: https://play.google.com/store/apps/details?id=com.souffsjoerd.nightwing
